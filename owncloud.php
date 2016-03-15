@@ -60,7 +60,7 @@ class owncloud extends rcube_plugin {
     // If task is owncloud load the frame
     if ($rcmail->task == 'owncloud') {
       // Add the css for the frame
-      $this->include_stylesheet($this->local_skin_path() . '/melanie2_frame.css');
+      $this->include_stylesheet($this->local_skin_path() . '/frame.css');
       $this->register_action('index', array(
               $this,
               'action'
