@@ -45,16 +45,16 @@ class owncloud extends rcube_plugin {
     ));
 
     // Add the css
-    $this->include_stylesheet($this->local_skin_path() . '/melanie2_owncloud.css');
+    $this->include_stylesheet($this->local_skin_path() . '/owncloud.css');
 
     // Create & register the task
     $this->register_task('owncloud');
     $this->add_button(array(
             'command' => 'owncloud',
-            'class' => 'button-melanie2_owncloud',
-            'classsel' => 'button-melanie2_owncloud button-selected',
+            'class' => 'button-owncloud',
+            'classsel' => 'button-owncloud button-selected',
             'innerclass' => 'button-inner',
-            'label' => 'melanie2_owncloud.task'
+            'label' => 'owncloud.task'
     ), 'taskbar');
 
     // If task is owncloud load the frame
@@ -73,14 +73,14 @@ class owncloud extends rcube_plugin {
     $rcmail = rcmail::get_instance();
     // register UI objects
     $rcmail->output->add_handlers(array(
-            'melanie2_owncloud_frame' => array(
+            'owncloud_frame' => array(
                     $this,
                     'owncloud_frame'
             )
     ));
     // Load the template
     $rcmail->output->set_pagetitle($this->gettext('title'));
-    $rcmail->output->send('melanie2_owncloud.melanie2_owncloud');
+    $rcmail->output->send('owncloud.owncloud');
   }
   /**
    * Call after logout

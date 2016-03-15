@@ -29,10 +29,10 @@ $(document).ready(function() {
 	    },
 	   success: function (data) {
 		   if (navigator.appName == "Microsoft Internet Explorer"){
-			    window.document.getElementById('melanie2_owncloud_frame').src = rcmail.env.owncloud_gotourl;
-			    window.document.getElementById('melanie2_owncloud_frame').contentWindow.location.reload(true);
+			    window.document.getElementById('owncloud_frame').src = rcmail.env.owncloud_gotourl;
+			    window.document.getElementById('owncloud_frame').contentWindow.location.reload(true);
 			} else {
-			   window.document.getElementById('melanie2_owncloud_frame').src = rcmail.env.owncloud_gotourl;
+			   window.document.getElementById('owncloud_frame').src = rcmail.env.owncloud_gotourl;
 			}
 		   $("#wait_box").hide();
 	   },
