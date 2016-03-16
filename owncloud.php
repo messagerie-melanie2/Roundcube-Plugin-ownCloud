@@ -61,6 +61,8 @@ class owncloud extends rcube_plugin {
     if ($rcmail->task == 'owncloud') {
       // Add the css for the frame
       $this->include_stylesheet($this->local_skin_path() . '/frame.css');
+      // Disable refresh
+      $rcmail->output->set_env('refresh_interval', 0);
       $this->register_action('index', array(
               $this,
               'action'
