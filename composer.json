@@ -1,0 +1,30 @@
+{
+    "name": "melanie2/owncloud",
+    "type": "roundcube-plugin",
+    "description": "Embed ownCloud inside your Roundcube with user authentication",
+    "keywords": ["owncloud"],
+    "homepage": "https://github.com/messagerie-melanie2/Roundcube-Plugin-ownCloud",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Thomas Payen",
+            "homepage": "https://github.com/tpayen",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://plugins.roundcube.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "roundcube/plugin-installer": ">=0.1.6"
+    },
+    "extra": {
+        "roundcube": {
+            "min-version": "1.1",
+        }
+    }
+}
