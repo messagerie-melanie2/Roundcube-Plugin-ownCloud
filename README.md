@@ -24,3 +24,9 @@ downloaded archive.
 * To avoid cross-domain errors you should use the same url (domain) for Roundcube and ownCloud.
 * Add and enable "roundcube_external" apps to your ownCloud instance (in owncloud/apps/)
 * You can also add melanie2 theme to owncloud
+
+Configuration
+-------------
+
+* In Roundcube plugin you need to rename config.inc.php.dist to config.inc.php. And configure your owncloud URL and a random DES key of 24 characters.
+* In ownCloud, you need to edit the config.php file and add a 'roundcube_owncloud_des_key' property with the same DES key.
