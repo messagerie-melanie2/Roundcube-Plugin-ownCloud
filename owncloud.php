@@ -69,6 +69,15 @@ class owncloud extends rcube_plugin {
       ));
       $this->login_owncloud();
     }
+    elseif ($rcmail->task == 'mail' || $rcmail->task == 'addressbook' || $rcmail->task == 'calendar') {
+      // Appel le script de de gestion des liens vers le sondage
+      $this->include_script('owncloud_link.js');
+      $rcmail->output->set_env('owncloud_file_url', $rcmail->url(array(
+              "_task" => "owncloud",
+              "_params" => "%%other_params%%"
+      )));
+      $rcmail->output->set_env('owncloud_external_url', $rcmail->config->get('owncloud_external_url'));
+    }
   }
 
   function action() {
@@ -125,8 +134,13 @@ class owncloud extends rcube_plugin {
     $rcmail->output->set_env('owncloud_password', urlencode($this->encrypt($rcmail->get_user_password())));
     $rcmail->output->set_env('owncloud_url', $owncloud_url);
 
-    $skin = $rcmail->config->get("skin");
-    $rcmail->output->set_env('owncloud_gotourl', $owncloud_url);
+  	if (isset($_GET['_params'])) {
+      $params = rcube_utils::get_input_value('_params', rcube_utils::INPUT_GET);
+      $rcmail->output->set_env('owncloud_gotourl', $owncloud_url . $params);
+    }
+    else {
+      $rcmail->output->set_env('owncloud_gotourl', $owncloud_url);
+    }
     // Call the connection to owncloud script
     $this->include_script('owncloud.js');
   }
