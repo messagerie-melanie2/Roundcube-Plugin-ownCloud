@@ -1,0 +1,161 @@
+/**
+ * @author Jan-Christoph Borchardt, http://jancborchardt.net
+ * @copyright Copyright (c) 2015, ownCloud, Inc.
+ * @license AGPL-3.0
+ *
+ * This code is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License, version 3,
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+
+/* header color */
+/* this is the main brand color */
+#body-user #header,
+#body-settings #header,
+#body-public #header {
+	background-color: #eaeaea;
+	color: #000;
+	box-shadow: 0px 0px 2px #999;
+}
+
+/* use logos from theme */
+#nextcloud {
+	display: none;
+}
+
+#header #settings,
+#header #contactsmenu,
+#header .notifications {
+	display: none;
+	box-shadow: none;
+	border-bottom: 1px solid #d0d0d0;
+}
+
+#app-settings {
+	display: none;
+}
+
+.header-appname {
+	color: #000;
+}
+
+
+#app-navigation {
+	background-color: #f2f2f2;
+	border-right: 1px solid #d0d0d0;
+}
+
+#app-navigation > ul > li > a, 
+#app-navigation > ul > li > ul > li > a {
+	opacity: 1;
+}
+
+#app-navigation > ul > li.active, 
+#app-navigation > ul > li a:hover, 
+#app-navigation > ul > li a:focus, 
+#app-navigation > ul > li a:active, 
+#app-navigation > ul > li a.selected, 
+#app-navigation > ul > li a.active, 
+#app-navigation > ul > li.active > a, 
+#app-navigation > ul > li a:hover > a, 
+#app-navigation > ul > li a:focus > a, 
+#app-navigation > ul > li a:active > a, 
+#app-navigation > ul > li a.selected > a, 
+#app-navigation > ul > li a.active > a {
+	box-shadow: none;
+	background-color: #fff;
+	font-weight: bold;
+}
+
+.searchbox input[type="search"] {
+	background-position-x: 6px;
+	color: #000;
+	width: 268px;
+	cursor: text;
+	background-color: #fff;
+	border: 1px solid #d5d5d5;
+	border-radius: 4px;
+}
+
+.searchbox input[type="search"],
+.searchbox input[type="search"]:active,
+.searchbox input[type="search"]:focus {
+	color: #000;
+	width: 268px;
+	cursor: text;
+	background-color: #fff !important;
+	border: 1px solid #d5d5d5 !important;
+	border-radius: 4px;
+	background: url(../img/rechercher.png) 6px center no-repeat #fff;
+}
+
+#appmenu {
+	margin-left: 13px;
+}
+
+#appmenu li a {
+	text-align: center;
+	font-size: 10px;
+	width: 38px;
+	min-width: auto;
+	max-width: auto;
+	height: 30px;
+	overflow: hidden;
+	padding: 0;
+	text-shadow: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: solid 1px #d5d5d5;
+	border-radius: 6px;
+	text-indent: -9999px;
+	z-index: 100;
+	margin-right: 6px;
+	background-color: #fff;
+}
+
+#appmenu li span,
+#appmenu li:hover a + span, 
+#appmenu li a:focus + span, 
+#appmenu li:hover span, 
+#appmenu li:focus span, 
+#appmenu li a:focus span {
+	display: none;
+}
+
+#appmenu li[data-id=files] a {
+	background: url(../img/files.png) center center no-repeat #fff;
+}
+
+#appmenu li[data-id=activity] a {
+	background: url(../img/activity.png) center center no-repeat #fff;
+}
+
+#appmenu li[data-id=gallery] a {
+	display: none;
+}
+
+#appmenu li[data-id=deck] a {
+	background: url(../img/deck.png) center center no-repeat #fff;
+}
+
+#appmenu li a svg {
+	display: none;
+}
+
+#appmenu li a.active::before, 
+#appmenu li:hover a::before, 
+#appmenu li:hover a.active::before, 
+#appmenu li a:focus::before {
+    display: none;
+}
+
+
+
